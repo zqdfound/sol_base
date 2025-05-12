@@ -9,11 +9,16 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
 						"name": "_id",
 						"type": "uint256"
 					}
 				],
-				"name": "sayHello",
+				"name": "callSayHelloByFactory",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -27,6 +32,11 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
 						"internalType": "string",
 						"name": "newStr",
 						"type": "string"
@@ -37,9 +47,35 @@
 						"type": "uint256"
 					}
 				],
-				"name": "setHello",
+				"name": "callSetHelloByFactory",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "createHelloWorld",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getHelloWorldByIndex",
+				"outputs": [
+					{
+						"internalType": "contract HelloWorld",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -56,7 +92,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/blank_test.sol": "HelloWorld"
+			"contracts/blank_test_factory.sol": "HelloWorldFactory"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -76,6 +112,14 @@
 			"urls": [
 				"bzz-raw://9e5d02fe0427fe652ddd4679ec06fe4a6ea18bd9dfb807dcf663248e726a1313",
 				"dweb:/ipfs/QmdmQ7UxGHhiHnxRQxjyam2HrMAm7oVij4tkmTPBMWLwGx"
+			]
+		},
+		"contracts/blank_test_factory.sol": {
+			"keccak256": "0x42240a9dd8c9fae27cec199c87228678ab8151dfbd2673d8b207b5edc4d207af",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ba3e7d9416ea3d2f41816ff083173b88ed6210ea0ab007bfb5b99d68f2692edf",
+				"dweb:/ipfs/QmTGSDWRuWxUjoh32e5ocXQ8RXSwGdER6zNy5nXR2sWtW9"
 			]
 		}
 	},
